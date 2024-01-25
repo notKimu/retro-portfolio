@@ -1,0 +1,70 @@
+/** FONTS */
+@font-face {
+    font-family: "Hurmit Nerd Font";
+    font-style:  normal;
+    src:         url("../fonts/HurmitNerdFont-Regular.otf");
+}
+
+/** GLOBAL STYLING  */
+
+:root {
+    --bg-dark:      #191a1a;
+    --fg-light:     #f0e9f4;
+
+    --border-width: .3rem;
+}
+
+* {
+    box-sizing: border-box;
+    color:      var(--fg-light);
+
+    margin:     0;
+    padding:    0;
+
+    /* transition: .1s; */
+    font-family: "Hurmit Nerd Font";
+}
+
+body,
+html {
+    background-color: var(--bg-dark);
+}
+
+main {
+    padding: 2rem 12rem;
+    overflow: hidden;
+}
+header {
+    padding: .5rem 12rem
+}
+
+.adaptive-text {
+    font-size: clamp(1rem, 5dvw, 2rem);
+}
+
+button {
+    background-color: transparent;
+    border:           unset;
+    cursor:           pointer;
+    font-size:        unset;
+    text-align:       unset;
+}
+
+/**RRRRESPONSIVE */
+@media screen and (max-width: 1024px) {
+    main {
+        padding: 2rem 6rem;
+    }
+    header {
+        padding: .5rem 6rem
+    }
+}
+
+@media screen and (max-width: 728px) {
+    main {
+        padding: 2rem 2rem;
+    }
+    header {
+        padding: .5rem 2rem
+    }
+}

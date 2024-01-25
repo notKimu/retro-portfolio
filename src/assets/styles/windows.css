@@ -1,0 +1,3 @@
+.window {
+    border: var(--border-width) solid var(--fg-light);
+}
