@@ -16,9 +16,9 @@
         "Programming is more about the process and what you give to people rather than the money :3",
         "A long time ago, I tried creating my own videogame. It didn't go very well...",
         "I love minimalist apps that are packed of features.",
-        "Nope, I don't use Wordpress, I don't wanna.",
+        "Nope, I don't use Wordpress, I don't wanna cry.",
         "Stardew Valley is one of my favourite games!",
-        "Linux is my mainly driver, Artix Linux to be exact hehe~",
+        "Linux is my mainly driver, Artix Linux to be precise hehe~",
         "I don't like generic, corporate like stuff :<",
     ]
 
@@ -36,7 +36,7 @@
     }
 
     function addDelay(): void {
-        delay += 0.02;
+        delay += 0.01;
     }
 </script>
 
@@ -44,9 +44,9 @@
     <button v-on:click="randomizeMessage" class="profile window full-w flex g-x p-x">
         <img src="https://github.com/notkimu.png" class="profile__image full-h" alt="Github profile">
 
-        <div class="flex col g-m">
+        <div class="textbox flex col g-m">
             <h1>Kimu</h1>
-            <h1 class="adaptive-text">
+            <h1 class="adaptive-text-x">
                 <span
                     :key="idx++"
                     class="animated-text"
@@ -75,6 +75,10 @@
     }
 
     /** Verry fancy stuff */
+    .textbox {
+        padding-bottom: 3rem;
+    }
+
     .arrow {
         position: absolute;
         bottom:   0;

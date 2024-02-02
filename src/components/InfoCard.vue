@@ -1,37 +1,31 @@
 <script setup lang="ts">
+    import { RouterLink } from "vue-router";
+
     defineProps({
         title:   String,
         iconUrl: String,
+        path:    String,
     });
 </script>
 
 <template>
-    <div class="card window grid ratio-square p-x">
-        <div class="img__container full-h full-w grid p-center p-x">
-            <img class="img" :src="iconUrl" alt="">
+    <RouterLink :to="path ?? '/'" class="card window full-h full-w grid ratio-square p-x">
+        <div class="img__container flex p-x">
+            <img class="img full-h full-w" :src="iconUrl" alt="">
         </div>
 
-        <h2>{{ title }}</h2>
-    </div>
+        <h2 class="adaptive-text-m overflow-hidden text-ellipsis">{{ title }}</h2>
+    </RouterLink>
 </template>
 
 <style scoped>
     .card {
         grid-template-rows: 1fr 2rem;
-        overflow:           hidden;
     }
     .card:hover {
         background-color: var(--fg-light);
     }
     .card:hover h2, .card:hover img {
         filter: invert();
-    }
-
-    .img {
-        max-height: 100%;
-    }
-    .img__container {
-        max-height: 100%;
-
     }
 </style>

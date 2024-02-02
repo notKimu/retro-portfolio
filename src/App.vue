@@ -3,7 +3,7 @@ import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
+  <header class="flex a-center">
     <h1>Kimu@artix:~$</h1>
   </header>
   <div class="filler" />

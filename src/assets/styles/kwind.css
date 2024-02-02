@@ -52,6 +52,10 @@
 .wrap {
     flex-wrap: wrap;
 }
+
+.overflow-hidden {
+    overflow: hidden;
+}
 /************* */
 
 /** PADDINGS */
@@ -86,3 +90,9 @@
     gap: 3rem;
 }
 /******* */
+
+/** TEXT */
+.text-ellipsis {
+    text-overflow: ellipsis;
+}
+/*********/

@@ -37,20 +37,20 @@
 
         <!-- TECHNOLOGIES I USE -->
         <div v-if="!showSocials" class="content full-h full-w">
-            <div class="item-list flex g-x j-center wrap">
+            <div class="item-list flex g-xxl j-center wrap p-x">
                 <img class="item" :src="rustLogo" alt="The Rust Programming Language logo">
                 <img class="item" :src="typescriptLogo" alt="Typescript logo">
-                <img class="item" :src="javaLogo" alt="Java Programing Language logo">
-                <img class="item" :src="dockerLogo" alt="Java Programing Language logo">
-                <img class="item" :src="gitLogo" alt="Java Programing Language logo">
-                <img class="item" :src="vueLogo" alt="Java Programing Language logo">
-                <img class="item" :src="linuxLogo" alt="Java Programing Language logo">
+                <img class="item" :src="javaLogo" alt="Java Programming Language logo">
+                <img class="item" :src="dockerLogo" alt="Java Programming Language logo">
+                <img class="item" :src="gitLogo" alt="Java Programming Language logo">
+                <img class="item" :src="vueLogo" alt="Java Programming Language logo">
+                <img class="item" :src="linuxLogo" alt="Java Programming Language logo">
             </div>
         </div>
 
         <!-- MY SOCIALS :3 -->
         <div v-else class="content full-h full-w">
-            <div class="item-list flex g-x j-center wrap">
+            <div class="item-list flex g-xxl j-center wrap p-x">
                 <img class="item" :src="githubLogo" alt="Kimu's Github page">
                 <img class="item" :src="twitterLogo" alt="Kimu's Twitter page">
                 <img class="item" :src="discordLogo" alt="Kimu's Discord server">
@@ -62,10 +62,11 @@
 <style scoped>
     .active {
         background-color: var(--fg-light);
-        & * {
-            color: var(--bg-dark);
-        }
     }
+    .active * {
+        color: var(--bg-dark);
+    }
+
     .inactive {
         opacity: 0.5;
     }
@@ -77,9 +78,9 @@
     .selector {
         border-bottom:         var(--border-width) solid var(--fg-light);
         grid-template-columns: 1fr 1fr;
-        & button {
-            padding:          .2rem 1rem;
-        }
+    }
+    .selector button {
+        padding: .2rem 1rem;
     }
 
     .content {
@@ -89,10 +90,9 @@
     .item {
         height:  clamp(3rem, 15dvw, 6rem);
         filter:  saturate(0);
-        padding: .7rem;
-        &:hover {
-            filter: none;
-            scale: .97;
-        }
+    }
+    .item:hover {
+        filter: none;
+        scale: .97;
     }
 </style>

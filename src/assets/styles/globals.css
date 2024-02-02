@@ -38,8 +38,11 @@ header {
     padding: .5rem 12rem
 }
 
-.adaptive-text {
+.adaptive-text-x {
     font-size: clamp(1rem, 5dvw, 2rem);
+}
+.adaptive-text-m {
+    font-size: clamp(.6rem, 4dvw, 1.5rem);
 }
 
 button {
