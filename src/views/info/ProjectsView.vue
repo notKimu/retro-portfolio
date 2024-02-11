@@ -20,8 +20,9 @@
 
         <div class="info-content">
             <!-- Presentation image -->
-            <div class="full-w flex j-center">
+            <div class="full-w flex j-center a-center">
                 <img class="ramlethal-img" :src="ramlethal" />
+                <h2>Still not much...</h2>
             </div>
 
             <div class="divider" />

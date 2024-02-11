@@ -12,6 +12,7 @@
     // Socials
     import githubLogo from "@/assets/img/github.svg";
     import twitterLogo from "@/assets/img/twitter.svg";
+    import youtubeLogo from "@/assets/img/youtube.svg";
     import discordLogo from "@/assets/img/discord.svg";
 
     let showSocials = ref(false);
@@ -51,9 +52,18 @@
         <!-- MY SOCIALS :3 -->
         <div v-else class="content full-h full-w">
             <div class="item-list flex g-xxl j-center wrap p-x">
-                <img class="item" :src="githubLogo" alt="Kimu's Github page">
-                <img class="item" :src="twitterLogo" alt="Kimu's Twitter page">
-                <img class="item" :src="discordLogo" alt="Kimu's Discord server">
+                <a href="https://github.com/notKimu" target="_blank">
+                    <img class="item" :src="githubLogo" alt="Kimu's Github page">
+                </a>
+                <a href="https://twitter.com/notkimu" target="_blank">
+                    <img class="item" :src="twitterLogo" alt="Kimu's Twitter page">
+                </a>
+                <a href="https://www.youtube.com/@kimu_x64" target="_blank">
+                    <img class="item" :src="youtubeLogo" alt="Kimu's Youtube channel">
+                </a>
+                <a href="https://discord.gg/NfeXrQdXdE" target="_blank">
+                    <img class="item" :src="discordLogo" alt="Kimu's Discord server">
+                </a>
             </div>
         </div>
     </div>

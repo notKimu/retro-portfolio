@@ -27,7 +27,7 @@
 
             <!-- About me content -->
             <p class="adaptive-text-x">
-                I am a young software developer that likes messing around with computers and code.
+                A young && smol software developer that likes messing around with computers and software.
                 <br><br>
                 
                 Currently I am learning about Linux systems and building my own servers from scratch, I love 
@@ -36,7 +36,7 @@
 
                 As of sotfware, I like coding Discord bots and Minecraft plugins.
                 <br>
-                Rust and TypeScript are my main programming languages, I am trying to find others I like but
+                Rust and TypeScript are my main programming languages, I am trying to find others that I like but
                 I end up returning to these two... Always.
                 <br><br>
 

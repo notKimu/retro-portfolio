@@ -3,9 +3,8 @@ import MainView from '../views/MainView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
+  /**Always scroll to top */
   scrollBehavior(to, from, savedPosition) {
-    // Always scroll to top, except if returning to root
-    if (to.fullPath === "/") return;
     return { top: 0, behavior: "smooth" }
   },
 
