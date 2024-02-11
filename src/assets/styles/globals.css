@@ -4,14 +4,21 @@
     font-style:  normal;
     src:         url("../fonts/HurmitNerdFont-Regular.otf");
 }
+@font-face {
+    font-family: "Mintsoda";
+    font-style:  normal;
+    src:         url("../fonts/mintsoda.ttf");
+}
+
 
 /** GLOBAL STYLING  */
 
 :root {
-    --bg-dark:      #191a1a;
-    --fg-light:     #f0e9f4;
+    --bg-dark:          #191a1a;
+    --fg-light:         #f0e9f4;
+    --color-accent:     #fcbff7;
 
-    --border-width: .3rem;
+    --border-width:     .3rem;
 }
 
 * {
@@ -38,13 +45,6 @@ header {
     padding: .5rem 12rem
 }
 
-.adaptive-text-x {
-    font-size: clamp(1rem, 5dvw, 2rem);
-}
-.adaptive-text-m {
-    font-size: clamp(.6rem, 4dvw, 1.5rem);
-}
-
 button {
     background-color: transparent;
     border:           unset;
@@ -52,6 +52,32 @@ button {
     font-size:        unset;
     text-align:       unset;
 }
+
+/**TEXT STYLES */
+a {
+    text-decoration: none;
+}
+
+.adaptive-text-x {
+    font-size: clamp(1rem, 5dvw, 2rem);
+}
+.adaptive-text-m {
+    font-size: clamp(.6rem, 4dvw, 1.5rem);
+}
+
+.font-pixel * {
+    font-family: "Mintsoda";
+}
+
+
+/**FANCY STUFF */
+.divider {
+    height:           .1rem;
+    margin:           1rem 0;
+    
+    background-color: var(--fg-light);
+}
+
 
 /**RRRRESPONSIVE */
 @media screen and (max-width: 1024px) {

@@ -20,9 +20,9 @@
 
   <div class="information grid g-x">
       <InfoCard title="About" to="/about" :icon-url="aboutIcon" />
-      <InfoCard title="Projects" to="/about" :icon-url="projectsIcon" />
-      <InfoCard title="Workstation" to="/about" :icon-url="workstationIcon" />
-      <InfoCard title="lol" to="/about" :icon-url="downasaurIcon" />
+      <InfoCard title="Projects" to="/projects" :icon-url="projectsIcon" />
+      <InfoCard title="Workstation" to="/workstation" :icon-url="workstationIcon" />
+      <InfoCard title="Hobbies" to="/hobbies" :icon-url="downasaurIcon" />
     </div>
   </main>
 </template>

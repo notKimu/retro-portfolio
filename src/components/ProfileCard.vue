@@ -1,10 +1,11 @@
 <script setup lang="ts">
     import { ref } from "vue";
+    import WobblyText from "@/components/text/Wobbly.vue";
+
     import arrowIcon from "@/assets/img/play.svg";
 
-    let delay = 0;
-    let messageIndex = 0;
     let idx = 0;
+    let messageIndex = 0;
 
     let displayedMessage = ref("Heya! I am Kimu, a smol software engineer that likes messing around with code and computers.");
     const messageList = [
@@ -23,8 +24,6 @@
     ]
 
     const randomizeMessage = (): void => {
-        delay = 0;
-        
         let randomMessageIndex = Math.floor(Math.random() * (messageList.length - 1));
         if (randomMessageIndex === messageIndex) {
             randomMessageIndex += 1;
@@ -33,10 +32,9 @@
         
         // console.warn(randomMessageIndex+"<< Random | Length >> "+messageList.length)
         displayedMessage.value = messageList[randomMessageIndex];
-    }
-
-    function addDelay(): void {
-        delay += 0.01;
+        
+        // Update index so the wobbly component re-renders
+        idx += 1;
     }
 </script>
 
@@ -47,14 +45,7 @@
         <div class="textbox flex col g-m">
             <h1>Kimu</h1>
             <h1 class="adaptive-text-x">
-                <span
-                    :key="idx++"
-                    class="animated-text"
-                    :style="{ animationDelay: `${delay}s` }"
-                    v-for="word in displayedMessage.valueOf()"
-                >
-                    {{ word }}{{ addDelay() }}
-                </span>
+                <WobblyText :text="displayedMessage" :key="idx" />
             </h1>
         </div>
 
@@ -71,7 +62,7 @@
     }
 
     .profile__image {
-    height: clamp(3rem, 20dvw, 12rem);
+        height: clamp(3rem, 20dvw, 12rem);
     }
 
     /** Verry fancy stuff */
