@@ -2,7 +2,7 @@
     import "@/assets/styles/info/base.css";
     import WobblyText from "@/components/text/Wobbly.vue";
 
-    import mayGif from "@/assets/img/may_anggy.gif";
+    import mayGif from "@/assets/animations/may_anggy.gif";
 </script>
 
 <template>

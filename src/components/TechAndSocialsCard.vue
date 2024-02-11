@@ -2,18 +2,18 @@
     import { ref } from "vue";
 
     // Technologies
-    import rustLogo from "@/assets/img/rust.svg";
-    import typescriptLogo from "@/assets/img/typescript.svg";
-    import javaLogo from "@/assets/img/java.svg";
-    import dockerLogo from "@/assets/img/docker.svg";
-    import vueLogo from "@/assets/img/vue.svg";
-    import gitLogo from "@/assets/img/git.svg";
-    import linuxLogo from "@/assets/img/linux.svg";
+    import rustLogo from "@/assets/svg/rust.svg";
+    import typescriptLogo from "@/assets/svg/typescript.svg";
+    import javaLogo from "@/assets/svg/java.svg";
+    import dockerLogo from "@/assets/svg/docker.svg";
+    import vueLogo from "@/assets/svg/vue.svg";
+    import gitLogo from "@/assets/svg/git.svg";
+    import linuxLogo from "@/assets/svg/linux.svg";
     // Socials
-    import githubLogo from "@/assets/img/github.svg";
-    import twitterLogo from "@/assets/img/twitter.svg";
-    import youtubeLogo from "@/assets/img/youtube.svg";
-    import discordLogo from "@/assets/img/discord.svg";
+    import githubLogo from "@/assets/svg/github.svg";
+    import twitterLogo from "@/assets/svg/twitter.svg";
+    import youtubeLogo from "@/assets/svg/youtube.svg";
+    import discordLogo from "@/assets/svg/discord.svg";
 
     let showSocials = ref(false);
 </script>

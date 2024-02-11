@@ -6,10 +6,10 @@
 
   // Sadly I have to mess up the code and import the images
   // ... *sigh*
-  import aboutIcon from "@/assets/img/heart.svg";
-  import projectsIcon from "@/assets/img/article.svg";
-  import workstationIcon from "@/assets/img/computer.svg";
-  import downasaurIcon from "@/assets/img/downasaur.svg";
+  import aboutIcon from "@/assets/svg/heart.svg";
+  import projectsIcon from "@/assets/svg/article.svg";
+  import workstationIcon from "@/assets/svg/computer.svg";
+  import downasaurIcon from "@/assets/svg/downasaur.svg";
 </script>
 
 <template>

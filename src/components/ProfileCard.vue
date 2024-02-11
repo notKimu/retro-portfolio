@@ -2,7 +2,7 @@
     import { ref } from "vue";
     import WobblyText from "@/components/text/Wobbly.vue";
 
-    import arrowIcon from "@/assets/img/play.svg";
+    import arrowIcon from "@/assets/svg/play.svg";
 
     let idx = 0;
     let messageIndex = 0;
