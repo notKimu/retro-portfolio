@@ -7,12 +7,12 @@
 
 <template>
     <main class="flex col g-xxl">
-        <h1 class="font-pixel text-title">
+        <h1 class="about__title font-pixel text-title">
             <span>> </span>
             <WobblyText text="About me" :delay="0.05" />
         </h1>
 
-        <div class="info-content">
+        <div class="about__content">
             <!-- Presentation image -->
             <div class="full-w flex j-center g-xx">
                 <img width="50%" :src="mayGif" />

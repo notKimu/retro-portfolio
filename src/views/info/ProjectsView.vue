@@ -13,12 +13,12 @@
 
 <template>
     <main class="flex col g-xxl">
-        <h1 class="font-pixel text-title">
+        <h1 class="projects__title font-pixel text-title">
             <span>> </span>
             <WobblyText text="Projects" :delay="0.05" />
         </h1>
 
-        <div class="info-content">
+        <div class="projects__content">
             <!-- Presentation image -->
             <div class="full-w flex j-center a-center">
                 <img class="ramlethal-img" :src="ramlethal" />
