@@ -2,12 +2,12 @@
 @font-face {
     font-family: "Hurmit Nerd Font";
     font-style:  normal;
-    src:         url("../fonts/HurmitNerdFont-Regular.otf");
+    src:         url("@/assets/fonts/HurmitNerdFont-Regular.otf");
 }
 @font-face {
     font-family: "Mintsoda";
     font-style:  normal;
-    src:         url("../fonts/mintsoda.ttf");
+    src:         url("@/assets/fonts/mintsoda.ttf");
 }
 
 
@@ -22,13 +22,12 @@
 }
 
 * {
-    box-sizing: border-box;
-    color:      var(--fg-light);
+    box-sizing:  border-box;
+    color:       var(--fg-light);
 
-    margin:     0;
-    padding:    0;
+    margin:      0;
+    padding:     0;
 
-    /* transition: .1s; */
     font-family: "Hurmit Nerd Font";
 }
 
@@ -38,11 +37,11 @@ html {
 }
 
 main {
-    padding: 2rem 12rem;
+    padding:  2rem 12rem;
     overflow: hidden;
 }
 header {
-    padding: .5rem 12rem
+    padding:  .5rem 12rem
 }
 
 button {
