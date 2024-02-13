@@ -24,7 +24,8 @@
             <p class="adaptive-text-x">
                 My main OS is Artix Linux, which I use with Windows in a dual boot.
                 <br><br>
-
+                I've tried tons of Linux distros but I always end up with Artix, so I will 
+                stick with that for a while.
                 
             </p>
         </div>

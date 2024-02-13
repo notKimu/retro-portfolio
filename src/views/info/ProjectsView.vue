@@ -4,7 +4,7 @@
 
     import ProjectCard from "@/components/info/ProjectCard.vue";
     /**IMAGES */
-    import ramlethal from "@/assets/img/ramlethal.png";
+    import ramlethal from "@/assets/img/ramlethal.webp";
     import rubiu5Image from "@/assets/img/rubiu5.webp";
     import archanImage from "@/assets/img/archan.webp";
     import limeCordIcon from "@/assets/img/limecord.webp";
