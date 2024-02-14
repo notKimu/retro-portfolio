@@ -13,11 +13,7 @@
   backgroundMusicHandler.loop = true;
 
   onMounted(() => {
-    console.log("debug")
-    if (!shouldMuteAudio.value) {
-        console.log("play!")
-        backgroundMusicHandler.play();
-    }
+    if (!shouldMuteAudio.value) backgroundMusicHandler.play();
   });
 
   // Click count for easter egg
@@ -34,16 +30,13 @@
   // Switch mute mode
   function switchMute(): void {
     shouldMuteAudio.value = !shouldMuteAudio.value
+    localStorage.setItem("muted", String(shouldMuteAudio.value));
 
     if (shouldMuteAudio.value) {
-        console.log("nope!")
         backgroundMusicHandler.pause();
     } else {
-        console.log("play!")
         backgroundMusicHandler.play();
     }
-
-    localStorage.setItem("muted", String(shouldMuteAudio.value))
   }
 </script>
 

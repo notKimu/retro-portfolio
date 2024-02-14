@@ -36,8 +36,8 @@
         return audioFiles[randomVoiceNumber];
     }
 
-    function playAudioWithDelay(delay: number): void {
-        if (!props.playSound || localStorage.getItem("muted") === "true") return;
+    function playAudioWithDelay(letter: string, delay: number): void {
+        if (letter === " " || !props.playSound || localStorage.getItem("muted") === "true") return;
 
         const seconds = delay * 1000;
         setTimeout(playAudio, seconds);
@@ -50,7 +50,7 @@
         :style="{ animationDelay: `${currentDelay}s` }"
         v-for="letter in text"
     >
-        {{ letter }}{{ playAudioWithDelay(addDelay()) }}
+        {{ letter }}{{ playAudioWithDelay(letter, addDelay()) }}
     </span>
 </template>
 
