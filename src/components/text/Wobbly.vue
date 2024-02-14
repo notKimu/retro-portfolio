@@ -10,7 +10,7 @@
     import voice_8 from "@/assets/audio/voices/voice_8.mp3";
     import voice_9 from "@/assets/audio/voices/voice_9.mp3";
 
-    const audioFiles =[voice_1, voice_2, voice_3, voice_4, voice_5, voice_6, voice_7, voice_8, voice_9];
+    const audioFiles = [voice_1, voice_2, voice_3, voice_4, voice_5, voice_6, voice_7, voice_8, voice_9];
 
     const props = defineProps({
         text:  String,
@@ -21,28 +21,40 @@
     });
 
     let currentDelay = 0;
-    function addDelay(): void {
+    function addDelay(): number {
         currentDelay += props.delay;
+        return currentDelay;
+    }
+
+    function playAudio(): void {
+        new Audio(getRandomVoice()).play();
     }
 
     function getRandomVoice(): string {
         const randomVoiceNumber = Math.floor(Math.random() * 8);
         return audioFiles[randomVoiceNumber];
     }
+
+    function playAudioWithDelay(delay: number): void {
+        if (localStorage.getItem("muted") === "true") return;
+        
+        const seconds = delay * 1000;
+        setTimeout(playAudio, seconds);
+    }
 </script>
 
 <template>
     <span
-        class="wobbly-text"
+        class="wobbly__text"
         :style="{ animationDelay: `${currentDelay}s` }"
         v-for="letter in text"
     >
-        {{ letter }}{{ addDelay() }}
+        {{ letter }}{{ playAudioWithDelay(addDelay()) }}
     </span>
 </template>
 
 <style scoped>
-    .wobbly-text {
+    .wobbly__text {
         opacity:   0;
         position:  relative;
         animation: wobbly 1s infinite linear, reveal .1s linear forwards;
