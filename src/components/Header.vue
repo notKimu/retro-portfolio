@@ -1,10 +1,22 @@
 <!-- The Scriptsss -->
 <script setup lang="ts">
-  import { ref } from "vue";
+  import { onMounted, ref } from "vue";
   import { RouterLink } from "vue-router";
+
+  import backgroundMusic from "@/assets/audio/8bit_lagtrain.mp3";
   import windowsErrorSound from "@/assets/audio/windowsErrorSound.mp3";
 
-  let shouldMuteAudio = ref(localStorage.getItem("mute") === "true" ? true : false);
+  let shouldMuteAudio = ref(localStorage.getItem("muted") === "true");
+
+  const backgroundMusicHandler = new Audio(backgroundMusic);
+  onMounted(() => {
+    console.log("debug")
+    // Background music handling
+    if (!shouldMuteAudio.value) {
+        console.log("play!")
+        backgroundMusicHandler.play();
+    }
+  });
 
   // Click count for easter egg
   let clickCounter = 0;
@@ -20,6 +32,15 @@
   // Switch mute mode
   function switchMute(): void {
     shouldMuteAudio.value = !shouldMuteAudio.value
+
+    if (shouldMuteAudio.value) {
+        console.log("nope!")
+        backgroundMusicHandler.pause();
+    } else {
+        console.log("play!")
+        backgroundMusicHandler.play();
+    }
+
     localStorage.setItem("muted", String(shouldMuteAudio.value))
   }
 </script>
@@ -36,8 +57,8 @@
             </button>
       </RouterLink>
 
-      <button class="full-h" v-on:click="switchMute()">
-        <svg v-if="shouldMuteAudio === true" class="full-h" fill="var(--fg-light)" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="M12 7H14V8H15V9H17V8H18V7H20V9H19V10H18V12H19V13H20V15H18V14H17V13H15V14H14V15H12V13H13V12H14V10H13V9H12V7M6 8V7H7V6H8V5H9V4H10V3H11V19H10V18H9V17H8V16H7V15H6V14H2V8H6M7 10H4V12H7V13H8V14H9V8H8V9H7V10Z" /></svg>
+      <button class="full-h" @click="switchMute()">
+        <svg v-if="shouldMuteAudio" class="full-h" fill="var(--fg-light)" viewBox="0 0 21 21" xmlns="http://www.w3.org/2000/svg"><path d="M12 7H14V8H15V9H17V8H18V7H20V9H19V10H18V12H19V13H20V15H18V14H17V13H15V14H14V15H12V13H13V12H14V10H13V9H12V7M6 8V7H7V6H8V5H9V4H10V3H11V19H10V18H9V17H8V16H7V15H6V14H2V8H6M7 10H4V12H7V13H8V14H9V8H8V9H7V10Z" /></svg>
         <svg v-else class="full-h" fill="var(--fg-light)" viewBox="0 0 22 22" xmlns="http://www.w3.org/2000/svg" id="memory-volume-high"><path d="M13 2H15V3H16V4H17V5H18V6H19V8H20V14H19V16H18V17H17V18H16V19H15V20H13V18H14V17H15V16H16V15H17V13H18V9H17V7H16V6H15V5H14V4H13V2M14 7V8H15V10H16V12H15V14H14V15H13V7H14M2 8H6V7H7V6H8V5H9V4H10V3H11V19H10V18H9V17H8V16H7V15H6V14H2V8M4 10V12H7V13H8V14H9V8H8V9H7V10H4Z" /></svg>
     </button>
     </header>

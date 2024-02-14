@@ -37,7 +37,7 @@
 
     function playAudioWithDelay(delay: number): void {
         if (localStorage.getItem("muted") === "true") return;
-        
+
         const seconds = delay * 1000;
         setTimeout(playAudio, seconds);
     }

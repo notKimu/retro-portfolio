@@ -8,7 +8,7 @@
   // Funny COD hitmarker sound effect on each click
   function playClickSound() {
     if (localStorage.getItem("muted") === "true") return;
-    
+
     const audio = new Audio(clickSound);
     audio.play();
   }
