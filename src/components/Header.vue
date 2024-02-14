@@ -8,10 +8,12 @@
 
   let shouldMuteAudio = ref(localStorage.getItem("muted") === "true");
 
+  // Background music handler
   const backgroundMusicHandler = new Audio(backgroundMusic);
+  backgroundMusicHandler.loop = true;
+
   onMounted(() => {
     console.log("debug")
-    // Background music handling
     if (!shouldMuteAudio.value) {
         console.log("play!")
         backgroundMusicHandler.play();
