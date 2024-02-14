@@ -45,7 +45,7 @@
         <div class="textbox flex col g-m">
             <h1>Kimu</h1>
             <h1 class="adaptive-text-x">
-                <WobblyText :text="displayedMessage" :key="idx" />
+                <WobblyText :text="displayedMessage" :play-sound="idx !== 0" :key="idx" />
             </h1>
         </div>
 

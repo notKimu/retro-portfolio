@@ -18,6 +18,7 @@
             type: Number,
             default: 0.02,
         },
+        playSound: Boolean
     });
 
     let currentDelay = 0;
@@ -36,7 +37,7 @@
     }
 
     function playAudioWithDelay(delay: number): void {
-        if (localStorage.getItem("muted") === "true") return;
+        if (!props.playSound || localStorage.getItem("muted") === "true") return;
 
         const seconds = delay * 1000;
         setTimeout(playAudio, seconds);
