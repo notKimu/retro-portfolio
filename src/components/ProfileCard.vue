@@ -56,7 +56,6 @@
 <style scoped>
     .profile {
         position:         relative;
-        cursor:           pointer;
         background-color: transparent;
         text-align:       left;
     }

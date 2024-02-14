@@ -1,4 +1,17 @@
 <script setup lang="ts">
+    // Audio crap
+    import voice_1 from "@/assets/audio/voices/voice_1.mp3";
+    import voice_2 from "@/assets/audio/voices/voice_2.mp3";
+    import voice_3 from "@/assets/audio/voices/voice_3.mp3";
+    import voice_4 from "@/assets/audio/voices/voice_4.mp3";
+    import voice_5 from "@/assets/audio/voices/voice_5.mp3";
+    import voice_6 from "@/assets/audio/voices/voice_6.mp3";
+    import voice_7 from "@/assets/audio/voices/voice_7.mp3";
+    import voice_8 from "@/assets/audio/voices/voice_8.mp3";
+    import voice_9 from "@/assets/audio/voices/voice_9.mp3";
+
+    const audioFiles =[voice_1, voice_2, voice_3, voice_4, voice_5, voice_6, voice_7, voice_8, voice_9];
+
     const props = defineProps({
         text:  String,
         delay: {
@@ -10,6 +23,11 @@
     let currentDelay = 0;
     function addDelay(): void {
         currentDelay += props.delay;
+    }
+
+    function getRandomVoice(): string {
+        const randomVoiceNumber = Math.floor(Math.random() * 8);
+        return audioFiles[randomVoiceNumber];
     }
 </script>
 

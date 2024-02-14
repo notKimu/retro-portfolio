@@ -34,6 +34,7 @@
 body,
 html {
     background-color: var(--bg-dark);
+    cursor:           url("@/assets/img/cursor_std_alt.png"), none;
 }
 
 main {
@@ -47,7 +48,7 @@ header {
 button {
     background-color: transparent;
     border:           unset;
-    cursor:           pointer;
+    cursor:           url("@/assets/img/cursor_hover.png"), pointer;
     font-size:        unset;
     text-align:       unset;
 }
@@ -55,6 +56,7 @@ button {
 /**TEXT STYLES */
 a {
     text-decoration: none;
+    cursor:          url("@/assets/img/cursor_hover.png"), pointer;
 }
 
 .adaptive-text-x {
