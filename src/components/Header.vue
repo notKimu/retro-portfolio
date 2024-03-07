@@ -16,7 +16,7 @@
     if (!shouldMuteAudio.value) backgroundMusicHandler.play();
   });
 
-  // Click count for easter egg
+  // Click count for the Windows easter egg
   let clickCounter = 0;
   function addClick() {
     clickCounter += 1;

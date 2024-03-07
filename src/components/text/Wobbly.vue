@@ -1,3 +1,4 @@
+<!-- Script -->
 <script setup lang="ts">
     // Audio crap
     import voice_1 from "@/assets/audio/voices/voice_1.mp3";
@@ -54,6 +55,7 @@
     </span>
 </template>
 
+<!-- Styles -->
 <style scoped>
     .wobbly__text {
         opacity:   0;
